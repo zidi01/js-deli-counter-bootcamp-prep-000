@@ -37,8 +37,7 @@ function currentLine (array, item) {
   } else {
     for (let i = 0, l = array.length; i < l; i++) {
       array[i] = `${i}. ${array[i]}`;
-    // return array[pos];
-      
+      return array[i];
     }
   }
 }
