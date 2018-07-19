@@ -25,48 +25,23 @@ function nowServing (array) { // passed
 
 nowServing(deliLine);
 
-/*
-let currLine = ["Bill", "Jane", "Ann"];
-
-function currentLine (array) { // technically passed
-  if (array.length === 0) {
-    return "The line is currently empty.";
-  } else {
-    return "The line is currently: 1. Bill, 2. Jane, 3. Ann";
-  }
-}
-
-currentLine(currLine);
-*/
-
 
 let currLine = ["Bill", "Jane", "Ann"];
-let currLineCopy = ["The line is currently: ", ...currLine];
+let currLineCopy = currLine.slice();
+currLineCopy.unshift("The line is currently: ");
 
 function currentLine (array, item) { 
   if (array.length === 0) {
     return "The line is currently empty.";
-  } else {
     
-    for (array.length <= 1; array.length-1; i++) {
-      
-      return 
-      
-      
+  } else {
+    for (array.length <= 1; array.length-1; pos++) {
+      var pos = array.indexOf(item);
+      array[pos] = pos + ". " + array[pos];
+    // return array[pos];
       
     }
   }
 }
     
-/*  function lastNameInLine (array)  {
-          var lastItem = array[array.length-1];
-          return lastItem;
-        }
-  return String(`The line is currently: ${currPos} ${currItem} ${currPos} ${lastItem}`);
-  */
-
-
-
-currentLine(currLine);
-
-// String(`The line is currently: 1. Bill, 2. Jane, 3. Ann`)
+currentLine(currLineCopy);
