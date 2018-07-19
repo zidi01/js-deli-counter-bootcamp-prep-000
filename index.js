@@ -30,17 +30,19 @@ let currLine = ["Bill", "Jane", "Ann"];
 let currLineCopy = currLine.slice();
 currLineCopy.unshift("The line is currently: ");
 
-function currentLine (array, item) { 
-  if (array.length === 0) {
-    return "The line is currently empty.";
-    
-  } else {
-    for (let i = 0, l = array.length; i < l; i++) {
-      array[i] = `${i}. ${array[i]}`;
-      return array[i];
-    }
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
   }
-}
+
+  const numbersAndNames = []
+
+  for (let i = 0, l = line.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+  }
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+};
     
 currentLine(currLineCopy);
 
