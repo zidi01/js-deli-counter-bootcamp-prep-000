@@ -44,7 +44,7 @@ function currentLine (array, item) {
     
 currentLine(currLineCopy);
 
-
+/*
 function currentLine(line) {
   if (!line.length) {
     return "The line is currently empty."
@@ -57,4 +57,4 @@ function currentLine(line) {
   }
 
   return `The line is currently: ${numbersAndNames.join(', ')}`
-};
+};*/
